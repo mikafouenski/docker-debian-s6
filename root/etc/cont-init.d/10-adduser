@@ -1,0 +1,16 @@
+#!/usr/bin/with-contenv sh
+
+APPUID=${APPUID:-2000}
+APPGID=${APPGID:-2000}
+
+groupmod -o -g "$APPGID" appuser
+usermod -o -u "$APPUID" appuser
+
+chown -R appuser:appuser /config
+
+echo "
+-------------------------------------
+User uid:    $(id -u appuser)
+User gid:    $(id -g appuser)
+-------------------------------------
+"
