@@ -11,7 +11,7 @@ RUN tar xfz /tmp/s6-overlay.tar.gz -C / && \
     useradd -u 2000 -U -d /config -s /bin/false -G users appuser && \
     mkdir /config && \
     apt update && \
-    apt install -y --no-install-recommends gnupg2 && \
+    apt install -y --no-install-recommends gnupg2 dirmngr && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
 
 ADD root /
