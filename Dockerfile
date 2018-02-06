@@ -10,6 +10,8 @@ ADD https://github.com/just-containers/s6-overlay/releases/download/${S6_V}/s6-o
 RUN tar xfz /tmp/s6-overlay.tar.gz -C / && \
     useradd -u 2000 -U -d /config -s /bin/false -G users appuser && \
     mkdir /config && \
+    apt update && \
+    apt install -y --no-install-recommends gnupg2 && \
     rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
 
 ADD root /
