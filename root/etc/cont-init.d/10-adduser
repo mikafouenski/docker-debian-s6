@@ -7,7 +7,6 @@ groupmod -o -g "$GUID" appuser
 usermod -o -u "$PUID" appuser
 
 chown -R appuser:appuser /config
-chown -R appuser:appuser /defaults
 
 echo "
 -------------------------------------
@@ -15,3 +14,4 @@ User uid:        $(id -u appuser)
 User gid:        $(id -g appuser)
 -------------------------------------
 "
+
