@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv sh
+#!/usr/bin/with-contenv bash
 
 PUID=${PUID:-2000}
 GUID=${GUID:-2000}
