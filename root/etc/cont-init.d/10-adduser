@@ -1,9 +1,9 @@
 #!/usr/bin/with-contenv bash
 
 PUID=${PUID:-2000}
-GUID=${GUID:-2000}
+PGID=${PGID:-2000}
 
-groupmod -o -g "$GUID" appuser
+groupmod -o -g "$PGID" appuser
 usermod -o -u "$PUID" appuser
 
 chown -R appuser:appuser /config
